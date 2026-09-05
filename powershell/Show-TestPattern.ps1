@@ -193,7 +193,8 @@ try {
             $alternateWhite = -not $alternateWhite
             $nextToggle = $stopwatch.ElapsedMilliseconds + [Math]::Max(50,$StepMilliseconds)
             if ($LogPath) {
-                Write-MctEvent -LogPath $LogPath -TestId $TestId -Event 'pattern_step' -Data @{ state=if($alternateWhite){'white'}else{'black'} }
+                $stateName = if ($alternateWhite) { 'white' } else { 'black' }
+                Write-MctEvent -LogPath $LogPath -TestId $TestId -Event 'pattern_step' -Data @{ state=$stateName }
             }
             $form.Invalidate()
         }
