@@ -32,6 +32,7 @@
     { "id": "IDLE30", "pattern": "Black", "durationSeconds": 30 }
   ],
   "motionTests": [
-    { "id": "UPD_FULLSCREEN_ALT", "pattern": "Alternating", "durationSeconds": 12, "stepMilliseconds": 500 }
+    { "id": "UPD_MOVING_RECT", "mode": "MovingRectangle", "durationSeconds": 12, "stepMilliseconds": 100, "rectangleSize": 128, "pixelsPerStep": 24 },
+    { "id": "UPD_FULLSCREEN_ALT", "mode": "FullscreenAlternating", "durationSeconds": 12, "stepMilliseconds": 500 }
   ]
 }
