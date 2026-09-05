@@ -1,0 +1,38 @@
+{
+  "patternTests": [
+    { "id": "IMG01_BLACK", "pattern": "Black", "durationSeconds": 5 },
+    { "id": "IMG02_WHITE", "pattern": "White", "durationSeconds": 5 },
+    { "id": "IMG03_RED", "pattern": "Red", "durationSeconds": 5 },
+    { "id": "IMG04_GREEN", "pattern": "Green", "durationSeconds": 5 },
+    { "id": "IMG05_BLUE", "pattern": "Blue", "durationSeconds": 5 },
+    { "id": "IMG06_GRAY", "pattern": "Gray", "durationSeconds": 5 },
+    { "id": "IMG07_HORIZONTAL_SPLIT", "pattern": "HorizontalSplit", "durationSeconds": 5 },
+    { "id": "IMG08_VERTICAL_SPLIT", "pattern": "VerticalSplit", "durationSeconds": 5 },
+    { "id": "IMG09_QUADRANTS", "pattern": "Quadrants", "durationSeconds": 5 },
+    { "id": "IMG10_CHECKERBOARD", "pattern": "Checkerboard", "durationSeconds": 6 },
+    { "id": "IMG11_GRADIENT", "pattern": "Gradient", "durationSeconds": 6 },
+    { "id": "IMG12_NOISE", "pattern": "Noise", "durationSeconds": 8, "seed": 1701 }
+  ],
+  "regionTests": [
+    { "id": "REGION_X", "axis": "X" },
+    { "id": "REGION_Y", "axis": "Y" },
+    { "id": "REGION_WIDTH", "axis": "Width" },
+    { "id": "REGION_HEIGHT", "axis": "Height" },
+    { "id": "REGION_COLOR", "axis": "Color" },
+    { "id": "REGION_TWO", "axis": "TwoRegions" }
+  ],
+  "cursorTests": [
+    { "id": "CURSOR_X", "mode": "Horizontal" },
+    { "id": "CURSOR_Y", "mode": "Vertical" },
+    { "id": "CURSOR_DIAGONAL", "mode": "Diagonal" },
+    { "id": "CURSOR_SHAPES", "mode": "Shapes" }
+  ],
+  "idleTests": [
+    { "id": "IDLE05", "pattern": "Black", "durationSeconds": 5 },
+    { "id": "IDLE30", "pattern": "Black", "durationSeconds": 30 }
+  ],
+  "motionTests": [
+    { "id": "UPD_MOVING_RECT", "mode": "MovingRectangle", "durationSeconds": 12, "stepMilliseconds": 100, "rectangleSize": 128, "pixelsPerStep": 24 },
+    { "id": "UPD_FULLSCREEN_ALT", "mode": "FullscreenAlternating", "durationSeconds": 12, "stepMilliseconds": 500 }
+  ]
+}
