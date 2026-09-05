@@ -209,11 +209,13 @@ function Run-Role([string]$RoleName) {
             $caseId = "${prefix}_$($case.id)"
             Invoke-TestCase $caseId {
                 $args = @{
-                    DeviceName=$DeviceName; Pattern=[string]$case.pattern; DurationSeconds=[int]$case.durationSeconds;
+                    DeviceName=$DeviceName; Mode=[string]$case.mode; DurationSeconds=[int]$case.durationSeconds;
                     TestId=$caseId; LogPath=$logPath
                 }
                 if ($null -ne $case.PSObject.Properties['stepMilliseconds']) { $args.StepMilliseconds = [int]$case.stepMilliseconds }
-                & (Join-Path $PSScriptRoot 'Show-TestPattern.ps1') @args
+                if ($null -ne $case.PSObject.Properties['rectangleSize']) { $args.RectangleSize = [int]$case.rectangleSize }
+                if ($null -ne $case.PSObject.Properties['pixelsPerStep']) { $args.PixelsPerStep = [int]$case.pixelsPerStep }
+                & (Join-Path $PSScriptRoot 'Invoke-MotionExercise.ps1') @args
             }
         }
     }
